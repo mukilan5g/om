@@ -1,12 +1,20 @@
 import sys
 import os,re
 
+'''
+General Review Comments:
+-----------------------
+
+Please read more about object oriented programming. May help you to improvise this program better.
+'''
+
+# Class name should be noun and please check the syntax for class declaration. (review comment)
 class CheckHTML():
 
     def check_fileformat(self,filename):
         isSuccess = True
         try:
-            if '.html' in filename or '.txt' in filename:
+            if '.html' in filename or '.txt' in filename: # What if the filename is created like 'sample.txt.py'. (review comment)
                 if os.stat(filename).st_size != 0:
                    #print "filename correct format"
                     isSuccess = True
